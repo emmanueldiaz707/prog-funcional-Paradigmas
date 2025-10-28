@@ -1,6 +1,6 @@
 defmodule Nivel2 do
 
-# 4.	Defina una función que calcule la enésima potencia de un número.
+  # 4.	Defina una función que calcule la enésima potencia de un número.
   def npotencia(x,n) do
     cond do
       n == 1 -> x
@@ -12,7 +12,17 @@ defmodule Nivel2 do
 
 
 
-  # 5.	Escriba una función llamada “Cantidad” que devuelva la cantidad de elementos de una lista.
+  # 5. Escriba una función llamada “Cantidad” que devuelva la cantidad de elementos de una lista.
+  def cantidad(([])) do
+    0
+  end
+
+  def cantidad([_|xs]) do
+    1 + cantidad(xs)
+  end
+
+
+
 
 
   # 6.	Escriba una función llamada “Sumatoria” que devuelva la suma de elementos de una lista.
@@ -64,11 +74,12 @@ IO.puts("Ejercicio 4: n-potencia")
 IO.puts("5^0 = #{Nivel2.npotencia(5,0)}")
 IO.puts("5^1 = #{Nivel2.npotencia(5,1)}")
 IO.puts("5^2 = #{Nivel2.npotencia(5,2)}")
-IO.puts("5^3 = #{Nivel2.npotencia(5,3)}")
 IO.puts("5^5 = #{Nivel2.npotencia(5,5)}")
-IO.puts("5^-1 = #{Nivel2.npotencia(5,-1)}")
-IO.puts("5^-2 = #{Nivel2.npotencia(5,-2)}")
 IO.puts("5^-3 = #{Nivel2.npotencia(5,-3)}")
 IO.puts("------------------------------")
 
 # 5. Cantidad de elementos de una lista
+IO.puts("------------------------------")
+IO.puts("Ejercicio 5: cantidad de elementos de una lista")
+IO.puts("[:a,:t,:e,:c] = #{Nivel2.cantidad([:a,:t,:e,:c])}")
+IO.puts("------------------------------")
