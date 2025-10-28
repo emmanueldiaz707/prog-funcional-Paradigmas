@@ -26,12 +26,29 @@ defmodule Nivel2 do
 
 
   # 6.	Escriba una función llamada “Sumatoria” que devuelva la suma de elementos de una lista.
+  def sumatoria([]) do
+    0
+  end
+
+  def sumatoria([x|xs]) do
+    x + sumatoria(xs)
+  end
 
 
   # 7.	Realice una función que devuelva el i-ésimo elemento de una lista.
+  # Considero a i=0 como el primer elemento
+  def iesimo([x|_],0) do
+    x
+  end
+  def iesimo([x|xs],i) do
+    iesimo(xs,i-1)
+  end
+
 
 
   # 8.	Elimine el i-ésimo elemento de una lista.
+
+
 
 
   # 9.	Escriba una función llamada “Existe” que indique si un objeto se encuentra dentro de una lista determinada.
@@ -76,10 +93,18 @@ IO.puts("5^1 = #{Nivel2.npotencia(5,1)}")
 IO.puts("5^2 = #{Nivel2.npotencia(5,2)}")
 IO.puts("5^5 = #{Nivel2.npotencia(5,5)}")
 IO.puts("5^-3 = #{Nivel2.npotencia(5,-3)}")
-IO.puts("------------------------------")
 
 # 5. Cantidad de elementos de una lista
 IO.puts("------------------------------")
 IO.puts("Ejercicio 5: cantidad de elementos de una lista")
-IO.puts("[:a,:t,:e,:c] = #{Nivel2.cantidad([:a,:t,:e,:c])}")
+IO.puts("[:a,:t,:e,:c] tiene #{Nivel2.cantidad([:a,:t,:e,:c])} elementos")
+
+# 6. Sumatoria de elementos de una lista
 IO.puts("------------------------------")
+IO.puts("Ejercicio 6: sumatoria de elementos de una lista")
+IO.puts("La sumatoria de [1,2,3,4,5] es = #{Nivel2.sumatoria([1,2,3,4,5])}")
+
+# 7. i-ésimo elemento de una lista
+IO.puts("------------------------------")
+IO.puts("Ejercicio 7: i-ésimo elemento de una lista")
+IO.puts("El elemento 3 de [:a,:b,:c,:d,:e] es #{Nivel2.iesimo([:a,:b,:c,:d,:e],3)}")
