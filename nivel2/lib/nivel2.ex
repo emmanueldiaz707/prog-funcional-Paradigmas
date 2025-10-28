@@ -47,7 +47,15 @@ defmodule Nivel2 do
 
 
   # 8.	Elimine el i-ésimo elemento de una lista.
-
+  def eliminariesimo([], _i) do
+    []
+  end
+  def eliminariesimo([_|xs], 0) do
+    xs
+  end
+  def eliminariesimo([x|xs], i) do
+    [x | eliminariesimo(xs, i-1)]
+  end
 
 
 
@@ -108,3 +116,8 @@ IO.puts("La sumatoria de [1,2,3,4,5] es = #{Nivel2.sumatoria([1,2,3,4,5])}")
 IO.puts("------------------------------")
 IO.puts("Ejercicio 7: i-ésimo elemento de una lista")
 IO.puts("El elemento 3 de [:a,:b,:c,:d,:e] es #{Nivel2.iesimo([:a,:b,:c,:d,:e],3)}")
+
+# 8. Eliminar i-ésimo elemento de una lista
+IO.puts("------------------------------")
+IO.puts("Ejercicio 8: Eliminar i-ésimo elemento de una lista")
+IO.puts("Eliminando elemento 3 de [1,2,3,4,5]: #{inspect(Nivel2.eliminariesimo([1,2,3,4,5],3))}")
