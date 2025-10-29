@@ -109,7 +109,17 @@ defmodule Nivel2 do
   end
 
 
-  # 14.	Escriba una función que tome una lista y un elemento como argumentos, y devuelva la lista original con todas las ocurrencias de dicho elemento eliminadas.
+  # 14.	Función que tome una lista y un elemento como argumentos,
+  # y devuelva la lista original con todas las ocurrencias de dicho elemento eliminadas.
+  def listaSinElem([x],_e) do
+    [x]
+  end
+  def listaSinElem([x|xs],e) do
+    cond do
+      x == e -> listaSinElem(xs,e)
+      true -> [x | listaSinElem(xs,e)]
+    end
+  end
 
 
   # 15.	Escriba una función llamada "reemplazo", que tome una lista y dos elementos como argumentos, y devuelva la lista original con todas las instancias del primer elemento reemplazadas por el segundo.

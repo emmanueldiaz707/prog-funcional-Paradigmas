@@ -53,7 +53,7 @@ defmodule Nivel2Test do
   end
 
   test "Ejercicio 14: ocurrencias de un elemento en lista y lista sin elemento" do
-
+    assert Nivel2.listaSinElem([1,2,3,4,5,1,2,3,4,5,1,2,3,4,5],3) == [1,2,4,5,1,2,4,5,1,2,4,5]
   end
 
   test "Ejercicio 15: lista con instancias de un elemento reemplazadas por el otro" do
