@@ -37,10 +37,10 @@ defmodule Nivel2 do
 
   # 7.	Realice una función que devuelva el i-ésimo elemento de una lista.
   # Considero a i=0 como el primer elemento
-  def iesimo([x|_],0) do
+  def iesimo([x|_xs],0) do
     x
   end
-  def iesimo([x|xs],i) do
+  def iesimo([_x|xs],i) do
     iesimo(xs,i-1)
   end
 
@@ -102,46 +102,3 @@ defmodule Nivel2 do
 
 
 end
-
-# Pruebas
-
-# 4. n-potencia
-IO.puts("------------------------------")
-IO.puts("Ejercicio 4: n-potencia")
-IO.puts("5^0 = #{Nivel2.npotencia(5,0)}")
-IO.puts("5^1 = #{Nivel2.npotencia(5,1)}")
-IO.puts("5^2 = #{Nivel2.npotencia(5,2)}")
-IO.puts("5^5 = #{Nivel2.npotencia(5,5)}")
-IO.puts("5^-3 = #{Nivel2.npotencia(5,-3)}")
-
-# 5. Cantidad de elementos de una lista
-IO.puts("------------------------------")
-IO.puts("Ejercicio 5: cantidad de elementos de una lista")
-IO.puts("[:a,:t,:e,:c] tiene #{Nivel2.cantidad([:a,:t,:e,:c])} elementos")
-
-# 6. Sumatoria de elementos de una lista
-IO.puts("------------------------------")
-IO.puts("Ejercicio 6: sumatoria de elementos de una lista")
-IO.puts("La sumatoria de [1,2,3,4,5] es = #{Nivel2.sumatoria([1,2,3,4,5])}")
-
-# 7. i-ésimo elemento de una lista
-IO.puts("------------------------------")
-IO.puts("Ejercicio 7: i-ésimo elemento de una lista")
-IO.puts("El elemento 3 de [:a,:b,:c,:d,:e] es #{Nivel2.iesimo([:a,:b,:c,:d,:e],3)}")
-
-# 8. Eliminar i-ésimo elemento de una lista
-IO.puts("------------------------------")
-IO.puts("Ejercicio 8: eliminar i-ésimo elemento de una lista")
-IO.puts("Eliminando elemento 3 de [1,2,3,4,5]: #{inspect(Nivel2.eliminariesimo([1,2,3,4,5],3))}")
-
-# 9. Objeto pertenece a una lista
-IO.puts("------------------------------")
-IO.puts("Ejercicio 9: objeto pertenece a una lista")
-IO.puts("Lista: [1,2,3,4,5]")
-IO.puts("Objeto 3: #{Nivel2.existe(3,[1,2,3,4,5])}")
-IO.puts("Objeto 8: #{Nivel2.existe(8,[1,2,3,4,5])}")
-
-# 10. Media de una lista
-IO.puts("------------------------------")
-IO.puts("Ejercicio 10: media de una lista")
-IO.puts("La media de [5,6,7] es #{Nivel2.media([5,6,7])}")
