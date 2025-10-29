@@ -101,7 +101,12 @@ defmodule Nivel2 do
   end
 
 
-  # 13.	Realice un programa que calcule la sumatoria de las tres primeras potencias (es decir el número, el número al cuadrado y al cubo) de un número dado.
+  # 13.	Programa que calcule la sumatoria de las tres primeras potencias
+  # (es decir el número, el número al cuadrado y al cubo) de un número dado.
+
+  def sumaTresPotencias(x) do
+    x + npotencia(x,2) + npotencia(x,3)
+  end
 
 
   # 14.	Escriba una función que tome una lista y un elemento como argumentos, y devuelva la lista original con todas las ocurrencias de dicho elemento eliminadas.

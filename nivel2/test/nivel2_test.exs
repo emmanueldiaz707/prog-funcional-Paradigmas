@@ -46,7 +46,10 @@ defmodule Nivel2Test do
   end
 
   test "Ejercicio 13: calcular sumatoria de las 3 primeras potencias de un nro" do
-
+    assert Nivel2.sumaTresPotencias(3) == 3+9+27
+    assert Nivel2.sumaTresPotencias(0) == 0
+    assert Nivel2.sumaTresPotencias(1) == 3
+    assert Nivel2.sumaTresPotencias(5) == 5+25+125
   end
 
   test "Ejercicio 14: ocurrencias de un elemento en lista y lista sin elemento" do
