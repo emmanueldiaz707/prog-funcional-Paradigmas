@@ -69,6 +69,12 @@ defmodule Nivel2 do
 
 
   # 10.	Escriba una función que determine la Media de una lista de números.
+  def media([]) do
+    0
+  end
+  def media(x) do
+    Nivel2.sumatoria(x)/Nivel2.cantidad(x)
+  end
 
 
   # 11.	Agregue un elemento a una lista en una posición dada.
@@ -134,3 +140,8 @@ IO.puts("Ejercicio 9: objeto pertenece a una lista")
 IO.puts("Lista: [1,2,3,4,5]")
 IO.puts("Objeto 3: #{Nivel2.existe(3,[1,2,3,4,5])}")
 IO.puts("Objeto 8: #{Nivel2.existe(8,[1,2,3,4,5])}")
+
+# 10. Media de una lista
+IO.puts("------------------------------")
+IO.puts("Ejercicio 10: media de una lista")
+IO.puts("La media de [5,6,7] es #{Nivel2.media([5,6,7])}")
