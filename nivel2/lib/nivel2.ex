@@ -60,6 +60,12 @@ defmodule Nivel2 do
 
 
   # 9.	Escriba una función llamada “Existe” que indique si un objeto se encuentra dentro de una lista determinada.
+  def existe(_o,[]) do
+    false
+  end
+  def existe(o,[x|xs]) do
+    o == x or existe(o, xs)
+  end
 
 
   # 10.	Escriba una función que determine la Media de una lista de números.
@@ -119,5 +125,12 @@ IO.puts("El elemento 3 de [:a,:b,:c,:d,:e] es #{Nivel2.iesimo([:a,:b,:c,:d,:e],3
 
 # 8. Eliminar i-ésimo elemento de una lista
 IO.puts("------------------------------")
-IO.puts("Ejercicio 8: Eliminar i-ésimo elemento de una lista")
+IO.puts("Ejercicio 8: eliminar i-ésimo elemento de una lista")
 IO.puts("Eliminando elemento 3 de [1,2,3,4,5]: #{inspect(Nivel2.eliminariesimo([1,2,3,4,5],3))}")
+
+# 9. Objeto pertenece a una lista
+IO.puts("------------------------------")
+IO.puts("Ejercicio 9: objeto pertenece a una lista")
+IO.puts("Lista: [1,2,3,4,5]")
+IO.puts("Objeto 3: #{Nivel2.existe(3,[1,2,3,4,5])}")
+IO.puts("Objeto 8: #{Nivel2.existe(8,[1,2,3,4,5])}")
