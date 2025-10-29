@@ -90,6 +90,15 @@ defmodule Nivel2 do
 
 
   # 12.	Agregue un elemento a una lista ordenada, en el lugar que le corresponda.
+  def agregarOrdenada(e,[]) do
+    [e]
+  end
+  def agregarOrdenada(e,[x|xs]) do
+    cond do
+      e > x -> [x | agregarOrdenada(e,xs)]
+      true -> [e | [x | xs]]
+    end
+  end
 
 
   # 13.	Realice un programa que calcule la sumatoria de las tres primeras potencias (es decir el número, el número al cuadrado y al cubo) de un número dado.

@@ -38,4 +38,10 @@ defmodule Nivel2Test do
   test "Ejercicio 11: agregar elemento a una lista en posición dada" do
     assert Nivel2.agregar(9,[1,2,3,4,5],3) == [1,2,3,9,4,5]
   end
+
+  test "Ejercicio 12: agregar elemento a una lista ordenada donde corresponda" do
+    assert Nivel2.agregarOrdenada(9,[1,5,10,15]) == [1,5,9,10,15]
+    assert Nivel2.agregarOrdenada(0,[1,5,10,15]) == [0,1,5,10,15]
+    assert Nivel2.agregarOrdenada(20,[1,5,10,15]) == [1,5,10,15,20]
+  end
 end
