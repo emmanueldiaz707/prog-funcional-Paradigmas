@@ -78,6 +78,15 @@ defmodule Nivel2 do
 
 
   # 11.	Agregue un elemento a una lista en una posición dada.
+  def agregar(e,[],_i) do
+    [e]
+  end
+  def agregar(e,x,0) do
+    [e | x]
+  end
+  def agregar(e,[x|xs],i) do
+    [x | agregar(e,xs,i-1)]
+  end
 
 
   # 12.	Agregue un elemento a una lista ordenada, en el lugar que le corresponda.

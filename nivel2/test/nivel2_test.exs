@@ -34,4 +34,8 @@ defmodule Nivel2Test do
   test "Ejercicio 10: media de una lista" do
     assert Nivel2.media([5,6,7]) == 6
   end
+
+  test "Ejercicio 11: agregar elemento a una lista en posición dada" do
+    assert Nivel2.agregar(9,[1,2,3,4,5],3) == [1,2,3,9,4,5]
+  end
 end
