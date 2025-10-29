@@ -122,7 +122,17 @@ defmodule Nivel2 do
   end
 
 
-  # 15.	Escriba una función llamada "reemplazo", que tome una lista y dos elementos como argumentos, y devuelva la lista original con todas las instancias del primer elemento reemplazadas por el segundo.
+  # 15.	Función "reemplazo", que tome una lista y dos elementos como argumentos,
+  # y devuelva la lista original con todas las instancias del primer elemento reemplazadas por el segundo.
+  def reemplazo([x],_a,_b) do
+    [x]
+  end
+  def reemplazo([x|xs],a,b) do
+    cond do
+      x == a -> [b | reemplazo(xs,a,b)]
+      true -> [x | reemplazo(xs,a,b)]
+    end
+  end
 
 
   # 16.	Escriba una función que devuelva el mínimo elemento de una lista.

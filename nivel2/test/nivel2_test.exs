@@ -57,7 +57,7 @@ defmodule Nivel2Test do
   end
 
   test "Ejercicio 15: lista con instancias de un elemento reemplazadas por el otro" do
-
+    assert Nivel2.reemplazo([1,2,3,4,5,1,2,3,4,5],3,9) == [1,2,9,4,5,1,2,9,4,5]
   end
 
   test "Ejercicio 16: minimo de una lista" do
