@@ -44,4 +44,29 @@ defmodule Nivel2Test do
     assert Nivel2.agregarOrdenada(0,[1,5,10,15]) == [0,1,5,10,15]
     assert Nivel2.agregarOrdenada(20,[1,5,10,15]) == [1,5,10,15,20]
   end
+
+  test "Ejercicio 13: calcular sumatoria de las 3 primeras potencias de un nro" do
+
+  end
+
+  test "Ejercicio 14: ocurrencias de un elemento en lista y lista sin elemento" do
+
+  end
+
+  test "Ejercicio 15: lista con instancias de un elemento reemplazadas por el otro" do
+
+  end
+
+  test "Ejercicio 16: minimo de una lista" do
+
+  end
+
+  test "Ejercicio 17: maximo de una lista" do
+
+  end
+
+  test "Ejercicio 18: terna con promedio, máximo y mínimo de una lista" do
+
+  end
+
 end
