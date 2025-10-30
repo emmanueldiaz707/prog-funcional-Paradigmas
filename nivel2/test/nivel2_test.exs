@@ -65,7 +65,7 @@ defmodule Nivel2Test do
   end
 
   test "Ejercicio 17: maximo de una lista" do
-
+    assert Nivel2.maximo([5,2,8,10,4,7,9,3]) == 10
   end
 
   test "Ejercicio 18: terna con promedio, máximo y mínimo de una lista" do

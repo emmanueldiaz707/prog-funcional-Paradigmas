@@ -147,7 +147,15 @@ defmodule Nivel2 do
   end
 
   # 17.	Escriba una función que devuelva el máximo elemento de una lista.
-
+  def maximo([x]) do
+    x
+  end
+  def maximo([x|[y|xs]]) do
+    cond do
+      x > y -> maximo([x|xs])
+      true -> maximo([y|xs])
+    end
+  end
 
   # 18.	Defina una función que tome una lista de números y devuelva una 3-upla formada por el promedio, el máximo y el mínimo de la lista.
 
