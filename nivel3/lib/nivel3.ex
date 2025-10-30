@@ -4,6 +4,64 @@ defmodule Nivel3 do
   # 19.	Función que calcule el i-ésimo número perfecto
     # (los números perfectos son aquellos que son iguales a la suma de sus divisores.
 
+  def esDivisor(dividendo,divisor) do
+    rem(dividendo,divisor) == 0
+  end
+
+  def sumatoriaDivisoresPropios(nro) do
+    sumatoriaDivisoresPropios(nro,1)
+  end
+  def sumatoriaDivisoresPropios(nro,inicial) do
+    cond do
+      inicial >= nro -> 0
+      esDivisor(nro,inicial) -> inicial + sumatoriaDivisoresPropios(nro,inicial+1)
+      true -> sumatoriaDivisoresPropios(nro,inicial+1)
+    end
+  end
+
+  def esPerfecto(nro) do
+    nro == sumatoriaDivisoresPropios(nro)
+  end
+
+  def iesimoPerfecto(i) do
+    iesimoPerfecto(i,1)
+  end
+  def iesimoPerfecto(i,inicial) do
+    cond do
+      i == 1 and esPerfecto(inicial) -> inicial
+      esPerfecto(inicial) -> iesimoPerfecto(i-1,inicial+1)
+      true -> iesimoPerfecto(i,inicial+1)
+    end
+  end
+
+
+
+  # def sumadivisores(num, valor_desde) do
+  #   cond do
+  #   valor_desde >= num -> 0
+  #   esdivisor(valor_desde, num) -> valor_desde +  sumadivisores(num, valor_desde + 1)
+  #   true -> sumadivisores(num, valor_desde + 1)
+  #   end
+  # end
+
+  # #dominio: num natural
+  # def esperfecto(num) do
+  #   num == sumadivisores(num, 1)
+  # end
+
+  # #dominio: i natural, los numeros perfectos son naturales tambien
+  # def iesimoperfectodesde(i, valor_desde) do
+  #   cond do
+  #     i == 1 and esperfecto(valor_desde) -> valor_desde
+  #     esperfecto(valor_desde) -> iesimoperfectodesde(i-1, valor_desde + 1)
+  #     true -> iesimoperfectodesde(i, valor_desde + 1)
+  #   end
+  # end
+
+  # def iesimoperfecto(i) do
+  #   iesimoperfectodesde(i,1)
+  # end
+
 
 
 
