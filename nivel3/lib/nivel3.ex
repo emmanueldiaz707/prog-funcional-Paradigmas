@@ -66,8 +66,33 @@ defmodule Nivel3 do
 
 
   # 20.	Función que calcule los n primeros números primos y los devuelva en una lista.
+  def esPrimo(nro) do
+    esPrimo(nro,2,:math.sqrt(nro))
+  end
+  def esPrimo(nro,divisor,limite) do
+    cond do
+      divisor > limite -> true
+      rem(nro,divisor) == 0 -> false
+      true -> esPrimo(nro,divisor+1,limite)
+    end
+  end
 
+  def buscarSiguientePrimo(i) do
+    cond do
+      esPrimo(i+1) -> i+1
+      true -> buscarSiguientePrimo(i+1)
+    end
+  end
 
+  def nPrimos(n) do
+    nPrimos(n,2,[])
+  end
+  def nPrimos(n,i,lista) do
+    cond do
+      n == 1 -> [2]
+      true -> lista ++ nPrimos(n-1,buscarSiguientePrimo(i),lista)
+    end
+  end
 
 
   # 21.	Función que determine la Varianza de una lista de números:
