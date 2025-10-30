@@ -136,7 +136,15 @@ defmodule Nivel2 do
 
 
   # 16.	Escriba una función que devuelva el mínimo elemento de una lista.
-
+  def minimo([x]) do
+    x
+  end
+  def minimo([x|[y|xs]]) do
+    cond do
+      x < y -> minimo([x|xs])
+      true -> minimo([y|xs])
+    end
+  end
 
   # 17.	Escriba una función que devuelva el máximo elemento de una lista.
 
