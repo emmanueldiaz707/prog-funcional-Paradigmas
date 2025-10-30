@@ -69,7 +69,7 @@ defmodule Nivel2Test do
   end
 
   test "Ejercicio 18: terna con promedio, máximo y mínimo de una lista" do
-
+    assert Nivel2.promMaxMin([1,4,7,2,6,8]) == [28/6,1,8]
   end
 
 end
