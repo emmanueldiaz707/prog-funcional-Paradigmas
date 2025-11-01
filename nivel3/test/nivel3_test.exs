@@ -31,7 +31,6 @@ defmodule Nivel3Test do
 
   test "Ejercicio 20: lista de n primeros primos" do
     assert Nivel3.nPrimos(1) == [2]
-    assert Nivel3.nPrimos(10) == [2,3,5,7,11,13,17,19,23,29]
     assert Nivel3.nPrimos(2) == [2,3]
     assert Nivel3.nPrimos(3) == [2,3,5]
     assert Nivel3.nPrimos(4) == [2,3,5,7]
@@ -41,7 +40,7 @@ defmodule Nivel3Test do
     assert Nivel3.nPrimos(8) == [2,3,5,7,11,13,17,19]
     assert Nivel3.nPrimos(9) == [2,3,5,7,11,13,17,19,23]
     assert Nivel3.nPrimos(10) == [2,3,5,7,11,13,17,19,23,29]
-    # 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
+    assert Nivel3.nPrimos(12) == [2,3,5,7,11,13,17,19,23,29,31,37]
   end
 
 end

@@ -85,12 +85,13 @@ defmodule Nivel3 do
   end
 
   def nPrimos(n) do
-    nPrimos(n,2,[])
+    nPrimos(n,2)
   end
-  def nPrimos(n,i,lista) do
+  def nPrimos(n,i) do
     cond do
-      n == 1 -> [2]
-      true -> lista ++ nPrimos(n-1,buscarSiguientePrimo(i),lista)
+      n == 0 -> []
+      esPrimo(i) -> [i | nPrimos(n-1,buscarSiguientePrimo(i))]
+      true -> nPrimos(n,buscarSiguientePrimo(i))
     end
   end
 
