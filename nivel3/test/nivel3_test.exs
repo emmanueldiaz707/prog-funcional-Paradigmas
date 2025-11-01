@@ -43,4 +43,10 @@ defmodule Nivel3Test do
     assert Nivel3.nPrimos(12) == [2,3,5,7,11,13,17,19,23,29,31,37]
   end
 
+  test "Ejercicio 21: varianza de lista" do
+    assert Nivel3.varianza([1,2,3,4,5]) ==  2.5
+    assert Nivel3.varianza([2,6,1,8,7,5,9,6,7,4]) == 6.5
+    assert Nivel3.varianza([10,10,4,1,7,7,3,5,8,10]) == 10.055555555555555
+  end
+
 end

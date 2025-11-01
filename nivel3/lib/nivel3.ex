@@ -98,8 +98,38 @@ defmodule Nivel3 do
 
   # 21.	Función que determine la Varianza de una lista de números:
     # Varianza = Sumatoria (Xi - Media)2 / (n - 1). Siendo Xi cada uno de los n elementos de la lista.
+  def sumatoria([]) do
+    0
+  end
+  def sumatoria([x|xs]) do
+    x + sumatoria(xs)
+  end
+
+  def cantidad(([])) do
+    0
+  end
+  def cantidad([_x|xs]) do
+    1 + cantidad(xs)
+  end
 
 
+  def cuadrado(x) do
+    x*x
+  end
+
+  def cuadradoDesviacionLista([],_media) do
+    []
+  end
+  def cuadradoDesviacionLista([x|xs],media) do
+    [cuadrado(x-media) | cuadradoDesviacionLista(xs,media)]
+  end
+
+  def varianza(lista) do
+    varianza(lista,sumatoria(lista)/cantidad(lista),cantidad(lista))
+  end
+  def varianza(lista,media,n) do
+    sumatoria(cuadradoDesviacionLista(lista,media)) / (n - 1)
+  end
 
 
   # 22.	Función que calcule la Moda de una lista de números (el número que más se repite).
