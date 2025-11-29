@@ -133,6 +133,38 @@ defmodule Nivel3 do
 
 
   # 22.	Función que calcule la Moda de una lista de números (el número que más se repite).
+  def recuento(_elem,[]), do: 0
+  def recuento(elem, [x | xs]) do
+    cond do
+      elem == x -> 1 + recuento(elem,xs)
+      true -> recuento(elem,xs)
+    end
+  end
+
+  def eliminarDuplicados([]), do: []
+  def eliminarDuplicados([x|xs]) do
+    cond do
+      recuento(x,xs)>0 -> eliminarDuplicados(xs)
+      true -> [x | eliminarDuplicados(xs)]
+    end
+  end
+
+
+  # Comparar la cantidad de ocurrencias de los dos primeros elementos de la lista.
+  # Descartar el que tenga menos ocurrencias y avanzar.
+  def moda(lista) do
+    moda(lista,eliminarDuplicados(lista))
+  end
+  def moda(_listaOriginal,[a]) do
+    a
+  end
+  def moda(listaOriginal, [a, b | xs]) do
+    cond do
+      recuento(a,listaOriginal) >= recuento(b,listaOriginal) -> moda(listaOriginal,[a|xs])
+      true -> moda(listaOriginal,[b|xs])
+    end
+  end
+
 
 
 

@@ -49,4 +49,11 @@ defmodule Nivel3Test do
     assert Nivel3.varianza([10,10,4,1,7,7,3,5,8,10]) == 10.055555555555555
   end
 
+  test "Ejercicio 22: moda de lista" do
+    assert Nivel3.moda([5,1,4,5,1,2,3,2,4,4]) == 4
+    assert Nivel3.moda([1]) == 1
+    assert Nivel3.moda([5,4,3,2,1]) == 5
+    assert Nivel3.moda([1,1,2,3,4,5,5]) == 1
+    assert Nivel3.moda([1,1,2,3,4,5,5,5]) == 5
+  end
 end
