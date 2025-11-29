@@ -167,10 +167,24 @@ defmodule Nivel3 do
 
 
 
-
-
   # 23.	Función que devuelva la cantidad de números que contiene una lista.
-
+ # def numerosLista([]), do: []
+ # def numerosLista([x|xs]) do
+ #   cond do
+ #     is_number(x) -> [x | numerosLista(xs)]
+ #     true -> numerosLista(xs)
+ #   end
+ # end
+ # def cantidadNumeros(lista) do
+ #   cantidad(numerosLista(lista))
+ # end
+def cantidadNumeros([]), do: 0
+def cantidadNumeros([x|xs]) do
+  cond do
+    is_number(x) -> 1 + cantidadNumeros(xs)
+    true -> cantidadNumeros(xs)
+  end
+end
 
 
 

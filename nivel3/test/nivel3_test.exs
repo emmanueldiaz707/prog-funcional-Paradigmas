@@ -56,4 +56,8 @@ defmodule Nivel3Test do
     assert Nivel3.moda([1,1,2,3,4,5,5]) == 1
     assert Nivel3.moda([1,1,2,3,4,5,5,5]) == 5
   end
+
+  test "Ejercicio 23: cantidad de números de lista" do
+    assert Nivel3.cantidadNumeros([1, "hola", 3.14, :atom, 2, true]) == 3
+  end
 end
