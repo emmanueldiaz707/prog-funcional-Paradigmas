@@ -111,8 +111,8 @@ defmodule Nivel2 do
 
   # 14.	Función que tome una lista y un elemento como argumentos,
   # y devuelva la lista original con todas las ocurrencias de dicho elemento eliminadas.
-  def listaSinElem([x],_e) do
-    [x]
+  def listaSinElem([],_e) do
+    []
   end
   def listaSinElem([x|xs],e) do
     cond do
