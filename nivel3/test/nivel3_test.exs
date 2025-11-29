@@ -60,4 +60,11 @@ defmodule Nivel3Test do
   test "Ejercicio 23: cantidad de números de lista" do
     assert Nivel3.cantidadNumeros([1, "hola", 3.14, :atom, 2, true]) == 3
   end
+
+  test "Ejercicio 24: binario a decimal" do
+    assert Nivel3.binADec([1,1,0,0,1,0,0]) == 100
+    assert Nivel3.binADec([1,0,1]) == 5
+    assert Nivel3.binADec([0]) == 0
+    assert Nivel3.binADec([1]) == 1
+  end
 end

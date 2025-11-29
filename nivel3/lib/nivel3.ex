@@ -189,6 +189,25 @@ end
 
 
   # 24.	Función que transforme un binario, expresado a través de una lista de {0,1}, en decimal.
+  def potencia(b,n) do
+    cond do
+      n==0 -> 1
+      n==1 -> b
+      n<0  -> (1/b) * potencia(b,n+1)
+      true -> b*potencia(b,n-1)
+    end
+  end
+  def binADec(listaBin) do
+    binADec(listaBin,cantidad(listaBin)-1)
+  end
+  def binADec([],_n), do: 0
+  def binADec([x|xs],n) do
+    cond do
+      x==1 -> potencia(2,n) + binADec(xs,n-1)
+      true -> binADec(xs,n-1)
+    end
+  end
+
 
 
 
