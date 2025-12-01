@@ -11,4 +11,9 @@ defmodule Nivel4Test do
     assert Nivel4.sumatoria_cond([1,2,3,4,5,6], fn x -> rem(x,2) == 0 end) == 12
     assert Nivel4.sumatoria_cond([1,2,3,4,5,6], fn x -> x > 3 end) == 15
   end
+
+  test "Ejecicio 41: lista de elementos que cumplen la condicion" do
+    assert Nivel4.select([1,2,3,4,5,6,7,8,9], fn x -> rem(x,2) == 0 end) == [2,4,6,8]
+    assert Nivel4.select([1,2,3,4,5,6,7,8,9], fn x -> x < 4 end) == [1,2,3]
+  end
 end

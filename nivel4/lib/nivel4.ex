@@ -25,7 +25,13 @@ defmodule Nivel4 do
 
   # 41. Defina una función llamada “Select” que devuelva la lista de elementos que cumplen con una determinada condición.
 
-
+  def select([], _condicion), do: []
+  def select([x|xs], condicion) do
+    cond do
+      condicion.(x) -> [x | select(xs,condicion)]
+      true -> select(xs,condicion)
+    end
+  end
 
 
   # 42. Defina una función llamada “Map” o “Collect” que devuelva la lista de los resultados de aplicar una función que se pasa como parámetro a cada elemento de la lista de entrada.
