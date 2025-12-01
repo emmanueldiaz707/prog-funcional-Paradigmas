@@ -1,6 +1,13 @@
 defmodule Nivel4 do
 
-  # 39. Escriba una función llamada "Cantidad-de" que toma como argumentos una lista y una condición (función), y  devuelve la cantidad de elementos de la lista que cumplen con dicha condición.
+  # 39. Escriba una función llamada "Cantidad-de" que toma como argumentos una lista y una condición (función), y devuelve la cantidad de elementos de la lista que cumplen con dicha condición.
+  def cantidad_de([],_condicion), do: 0
+  def cantidad_de([x|xs], condicion) do
+    cond do
+      condicion.(x) -> 1 + cantidad_de(xs,condicion)
+      true -> cantidad_de(xs,condicion)
+    end
+  end
 
 
 
