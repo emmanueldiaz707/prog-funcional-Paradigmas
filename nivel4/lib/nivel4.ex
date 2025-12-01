@@ -42,8 +42,17 @@ defmodule Nivel4 do
   end
 
 
-  # 43. Escriba una función llamada “intercalar-según” que tome dos listas y una función como entrada, y construya una nueva lista resultado de intercalar las dos primeras en el orden establecido por la función (es decir, que la función se aplica a los dos elementos que se comparan en cada momento para determinar cuál es el mayor).
+  # 43. Escriba una función llamada “intercalar-según” que tome dos listas y una función como entrada,
+  # y construya una nueva lista resultado de intercalar las dos primeras en el orden establecido por la función
+  # (es decir, que la función se aplica a los dos elementos que se comparan en cada momento para determinar cuál es el mayor).
 
+  def intercalar_segun(lista_x, [], _condicion), do: lista_x
+  def intercalar_segun([], lista_y, _condicion), do: lista_y
+  def intercalar_segun([x|xs], [y|ys], condicion)
+  cond do
+    condicion.(x,y) -> [x, y | intercalar_segun(xs,ys,condicion)]
+    true -> [y, x | intercalar_segun(xs,ys,condicion)]
+  end
 
-
+  # No sé si está bien
 end
