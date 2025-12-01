@@ -16,4 +16,8 @@ defmodule Nivel4Test do
     assert Nivel4.select([1,2,3,4,5,6,7,8,9], fn x -> rem(x,2) == 0 end) == [2,4,6,8]
     assert Nivel4.select([1,2,3,4,5,6,7,8,9], fn x -> x < 4 end) == [1,2,3]
   end
+
+  test "Ejercicio 42: aplicar operacion a cada elemento de lista" do
+    assert Nivel4.collect([1,2,3,4,5], fn x -> x*2 end) == [2,4,6,8,10]
+  end
 end
