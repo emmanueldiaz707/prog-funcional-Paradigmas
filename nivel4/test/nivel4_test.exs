@@ -6,4 +6,9 @@ defmodule Nivel4Test do
     assert Nivel4.cantidad_de([1,2,3,4,5], fn x -> rem(x,2) == 0 end) == 2
     assert Nivel4.cantidad_de([1,2,3,4,5], fn x -> x < 0 end) == 0
   end
+
+  test "Ejercicio 40: sumatoria de elementos de lista que cumplen la condicion" do
+    assert Nivel4.sumatoria_cond([1,2,3,4,5,6], fn x -> rem(x,2) == 0 end) == 12
+    assert Nivel4.sumatoria_cond([1,2,3,4,5,6], fn x -> x > 3 end) == 15
+  end
 end

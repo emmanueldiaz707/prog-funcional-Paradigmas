@@ -14,7 +14,13 @@ defmodule Nivel4 do
 
   # 40. Defina una función que tome una lista de números y una condición (función) como parámetros y devuelva la sumatoria de los elementos que cumplen dicha condición.
 
-
+  def sumatoria_cond([],_condicion), do: 0
+  def sumatoria_cond([x|xs], condicion) do
+    cond do
+      condicion.(x) -> x + sumatoria_cond(xs,condicion)
+      true -> sumatoria_cond(xs,condicion)
+    end
+  end
 
 
   # 41. Defina una función llamada “Select” que devuelva la lista de elementos que cumplen con una determinada condición.
