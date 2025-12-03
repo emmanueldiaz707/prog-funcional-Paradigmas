@@ -14,7 +14,7 @@ Escriba una función que tome como entrada una lista sin sublistas L y un númer
 
 ### Ejercicio 2
 
-Escriba una función que, dada una lista con sublistas L, devuelva una lista donde el iésimo elemento representa la sumatoria de los números contenidos en nivel i de profunidad de L.
+Escriba una función que, dada una lista con sublistas L, devuelva una lista donde el iésimo elemento representa la sumatoria de los números contenidos en nivel i de profundidad de L.
 
 Si no hay elementos numéricos en un nivel específico, ese nivel tendrá valor 0 en la lista resultante.
 
