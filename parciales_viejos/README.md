@@ -38,7 +38,7 @@ Escriba la función que tome como entrada una lista con sublistas de un solo niv
 Escriba la función que tome como entrada una lista de pares ordenados y una lista de números (sin sublistas), y devuelva otra lista que contenga una sublista por cada par, donde cada sublista incluya los elementos de la lista de números que pertenecen a la secuencia aritmética definida por dicho par.  
 Cada par (A, S) define una secuencia que comienza en A y aumenta en S unidades cada paso (A, A+S, A+2S, ...).  
 Si S es negativo, la sublista correspondiente debe estar vacía.  
-Cada número puede aparecer en múltiples sublistas 0 en ninguna.  
+Cada número puede aparecer en múltiples sublistas o en ninguna.  
 Los elementos en cada sublista deben mantener el orden de aparición en la lista original.
 
     Lista de pares = [[3, 2], [6, 0], [12, 3], [7, 1]]
